@@ -1,0 +1,19 @@
+{
+  "name": "ngr",
+  "version": "0.1.0",
+  "description": "NGR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bklossner/ngr.git"
+  },
+  "author": "Bob Klossner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bklossner/ngr/issues"
+  },
+  "homepage": "https://github.com/bklossner/ngr#readme"
+}
