@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import $ from 'jquery';
+//import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React from 'react';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+  
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="container">
+          <div className="jumbotron">
+            <h1>NGR</h1>
+          </div>
+        </div>
       </div>
     );
   }
