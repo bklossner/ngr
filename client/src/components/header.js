@@ -5,16 +5,19 @@ import NGRLogo from './ngrlogo';
 class Header extends React.Component {
   
   /**
-   * @const srText
    * @description Screen reader text
    * @type {string}
    */
   srText = "Neo Geo Reviews";
   
+  /**
+   * @function render
+   * @description Output the header element, including {@link SNKLogo} and {@link NGRLogo}
+   * @returns {*}
+   */
   render() {
     return(
       <div className="container">
-        <h1 className="sr-only">{this.srText}</h1>
         <div className="row justify-content-sm-center">
           <div className="col-sm-auto">
             <SNKLogo/>
@@ -22,6 +25,7 @@ class Header extends React.Component {
         </div>
         <div className="row justify-content-sm-center">
           <div className="col-sm-auto">
+            <h1 className="sr-only">{this.srText}</h1>
             <NGRLogo/>
           </div>
         </div>
