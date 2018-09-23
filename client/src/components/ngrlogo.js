@@ -10,6 +10,7 @@ import ngrLogo from '../images/logo.png';
 class NGRLogo extends React.Component {
   
   /**
+   * @description Text for the alt and title attributes
    * @type {string}
    */
   description = "Neo Geo Reviews";
