@@ -20,6 +20,8 @@ function runSQL(sql, req, res) {
       console.error('error connecting: ' + error.stack);
       throw error;
     }
+    
+    // Send the response to the browser, in JSON format
     res.send(JSON.stringify(results));
   });
 }
@@ -52,7 +54,6 @@ router.get('/', function (req, res) {
  * @example http://someurl/games/[gameId]
  */
 router.get('/:gameId', function (req, res) {
-  // res.send("Game ID router - Not Implemented. Game Id: " + req.params.gameId);
   
   /**
    * @description SQL to return all games in the database
