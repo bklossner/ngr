@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+#root {
+  background: url("./images/marquee.png") no-repeat top;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+  color: ghostwhite;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.snkLogo {
+  margin-top: 62px;
+}
+
+.ngrLogo {
+  margin: 14px 0 0 0;
+}
+
+/* Override Bootstrap's .img-fluid class, adding width */
+.img-fluid {
+  width: 100%;
+}
+
+.game {
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.game-details-lg {
+  position: absolute;
+  top: 70%;
+  left: 9%;
+}
+
+.game-details-lg h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.game-details-lg p {
+  margin: 0 0 2px 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.game-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.game-year {
+  font-weight: 700;
+}
+
+.dropdown-container {
+  margin: 18px 0 28px 0;
+}
+
+.dropdown-menu {
+  background-color: #333333;
+  border-radius: 0;
+  border: 1px solid #979797;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-toggle {
+  border-radius: 0;
+  align-content: end;
+}
+
+.dropdown-toggle::after {
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 1em;
+  vertical-align: .255em;
+  content: "";
+  /*border-top: .3em solid;*/
+  /*border-right: .3em solid transparent;*/
+  /*border-bottom: 0;*/
+  /*border-left: .3em solid transparent;*/
+  
+  background-image: url("./images/chevron.png");
+}
