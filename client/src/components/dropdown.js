@@ -5,7 +5,7 @@ class Dropdown extends React.Component {
   render() {
     return (
       <div className="container dropdown-container">
-        <div className="row">
+        <div className="row justify-content-end">
           <div className="col-xs-12">
             <div className="btn-group">
               <button type="button" className="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
