@@ -20,7 +20,6 @@ function runSQL(sql, req, res) {
       console.error('error connecting: ' + error.stack);
       throw error;
     }
-    
     // Send the response to the browser, in JSON format
     res.send(JSON.stringify(results));
   });
@@ -38,7 +37,7 @@ router.get('/', function (req, res) {
    */
   const allGamesSQL = `
     select game.id, game.title, genre.genre, developer.developer,
-           rating.rating, release_year.release_year
+           rating.rating, release_year.release_year, to_base64(game.screenshot) as 'screenshot'
     from game, genre, developer, rating, release_year
     where game.genre_id = genre.id and
           game.developer_id = developer.id and
@@ -61,7 +60,7 @@ router.get('/:gameId', function (req, res) {
    */
   const allGamesSQL = `
     select game.id, game.title, genre.genre, developer.developer,
-           rating.rating, release_year.release_year
+           rating.rating, release_year.release_year, game.screenshot
     from game, genre, developer, rating, release_year
     where game.genre_id = genre.id and
           game.developer_id = developer.id and
