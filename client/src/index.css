@@ -6,30 +6,3 @@ body {
   font-family: "Source Sans Pro", SourceSansPro, -apple-system, sans-serif;
 }
 
-.snkLogo {
-  margin-top: 62px;
-}
-
-.ngrLogo {
-  margin: 14px 0 0 0;
-}
-
-/* Override Bootstrap's .img-fluid class, adding width */
-.img-fluid {
-  width: 100%;
-}
-
-.game {
-  height: 200px;
-  overflow: hidden;
-}
-
-.game-details {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-}
-
-.game-details p {
-  margin-bottom: 0;
-}
