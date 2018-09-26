@@ -1,6 +1,7 @@
 // Define the required modules
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -12,6 +13,11 @@ var indexRouter = require('./routes/index');
 const gamesRouter = require('./routes/games');
 
 var app = express();
+
+/**
+ * @description Enables Cross-Origin-Resource-Sharing (CORS)
+ */
+app.use(cors());
 
 /**
  * @description Implement a basic server security package
