@@ -18,7 +18,12 @@ class Header extends React.Component {
   render() {
     return(
       <div className="container">
-        <div className="row justify-content-sm-center">
+        <div className="row d-sm-none">
+          <div className="col-xs-auto">
+            <SNKLogo/>
+          </div>
+        </div>
+        <div className="row d-none d-sm-flex justify-content-center">
           <div className="col-sm-auto">
             <SNKLogo/>
           </div>
