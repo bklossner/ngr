@@ -48,6 +48,34 @@ body {
   line-height: 1;
 }
 
+.game-details-md {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.game-details-md p {
+  font-size: 1em;
+  margin: 0;
+}
+.game-details-md h2 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.game-details-sm {
+  position: absolute;
+  top: 35%;
+  left: 12%;
+}
+.game-details-sm p {
+  font-size: .8em;
+  margin: 0;
+}
+.game-details-sm h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
 .game-title {
   font-size: 24px;
   font-weight: 300;
@@ -74,6 +102,7 @@ body {
 .dropdown-toggle {
   border-radius: 0;
   align-content: end;
+  width: 100%;
 }
 
 .dropdown-toggle::after {
@@ -90,4 +119,8 @@ body {
   /*border-left: .3em solid transparent;*/
   
   background-image: url("./images/chevron.png");
+}
+
+.btn-group {
+  width: 150px;
 }
