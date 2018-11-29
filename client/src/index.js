@@ -4,7 +4,7 @@ import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
+import './css/styles.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
