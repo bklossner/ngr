@@ -1,8 +1,10 @@
 import React from 'react';
 import './css/App.css';
-import Header from './components/header';
+
+
+import Header from './components/Header';
 import SortByDropDown from './components/SortByDropDown';
-import GameList from './components/gamelist';
+import GameList from './components/GameList';
 
 class App extends React.Component {
   
