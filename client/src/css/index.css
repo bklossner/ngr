@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700');
+
 body {
   background: black;
   margin: 0;
@@ -14,9 +16,19 @@ body {
   margin: 14px 0 0 0;
 }
 
+
 .game {
-  border: 1px white solid;
-  border-radius: 5px;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("../images/baseball_stars_2_480x360.jpg");
+  border-radius: 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 10px;
+  width: 300px;
+  height: 169px;
+  cursor: pointer;
 }
 
 .game-details {
@@ -32,4 +44,87 @@ body {
   height: 24px;
   font-family: "Source Sans Pro", SourceSansPro, -apple-system, sans-serif;
   font-weight: lighter;
+}
+
+/* Imported CSS from NGR-Static */
+.dropdown-container {
+  width: 960px;
+}
+
+.logo-snk {
+  margin-top: 64px;
+}
+
+.logo-ngr {
+  margin: 11px 0 18px 0;
+}
+
+
+.game-info-container {
+  margin: 15px 20px;
+}
+
+.game-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.modal {
+  filter: drop-shadow(0 0 0.70rem #29292a);
+  border-radius: 2px;
+}
+
+.modal-close {
+  color: red;
+  text-shadow: none;
+}
+
+.modal-content {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.modal-header {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.rating {
+  font-size: 1.3em;
+}
+
+.sticky-content {
+  width: 300px;
+  margin: 0 auto;
+  padding: 9px 0;
+}
+
+#sticky-header {
+  display: none;
+  position: sticky;
+  top: 0;
+  height: 49px;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.sticky-header {
+  display: flex;
+  align-content: center;
+}
+
+.year {
+  font-size: 1em;
+  margin: 0;
+  font-weight: bold;
 }
