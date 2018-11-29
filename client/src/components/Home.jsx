@@ -13,8 +13,6 @@ class Home extends React.Component {
   render() {
     return(
       <div>
-        <NavSticky />
-        <Header />
         <SortByDropDown />
         <GameList />
       </div>
