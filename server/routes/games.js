@@ -37,8 +37,8 @@ router.get('/', function (req, res) {
    * @type {string} allGamesSQL
    */
   const allGamesSQL = `
-    select game.id, game.title, game.review, genre.genre, developer.developer,
-      rating.rating, release_year.release_year
+    select game.id, game.title, game.review, genre.genre,
+      developer.developer, rating.rating, release_year.release_year
     from game, genre, developer, rating, release_year
     where game.genre_id = genre.id and
       game.developer_id = developer.id and
