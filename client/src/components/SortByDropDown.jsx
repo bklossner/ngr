@@ -2,17 +2,30 @@ import React from 'react';
 
 class SortByDropDown extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentSort : "Name"
+    };
+    
+    this.sort = this.sort.bind(this);
+  }
+  
+  sort(val) {
+    alert(`Sort by ${val}`);
+  }
+  
   render() {
     return (
       <div className="container">
         <div className="btn-group">
           <button type="button" className="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sort by
+            Sort by {this.state.currentSort}
           </button>
           <div className="dropdown-menu">
-            <a className="dropdown-item" href="#">Action</a>
-            <a className="dropdown-item" href="#">Another action</a>
-            <a className="dropdown-item" href="#">Something else here</a>
+            <a className="dropdown-item" href="#">Name</a>
+            <a className="dropdown-item" href="#">Year</a>
+            <a className="dropdown-item" href="#">Genre</a>
           </div>
         </div>
       </div>
