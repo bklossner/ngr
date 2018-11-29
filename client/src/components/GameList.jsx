@@ -38,11 +38,13 @@ class GameList extends React.Component {
       <div className="container">
         
         <div className="row">
-        {this.state.games.map(game =>
-          <div className="col-sm-4">
-            <Game key={game.id} dev={game.developer} genre={game.genre} id={game.id} rating={game.rating} title={game.title} year={game.release_year} />
+          <div className="col-12">
+            <div className="game-list-container">
+              {this.state.games.map(game =>
+                <Game key={game.id} dev={game.developer} genre={game.genre} id={game.id} rating={game.rating} title={game.title} year={game.release_year} />
+              )}
+            </div>
           </div>
-        )}
         </div>
       </div>
     )
