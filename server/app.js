@@ -9,7 +9,7 @@ var mysql = require('mysql');
 
 // Define the routers
 var indexRouter = require('./routes/index');
-const gamesRouter = require('./routes/games');
+var gamesRouter = require('./routes/games');
 
 var app = express();
 
