@@ -43,10 +43,10 @@ class Game extends React.Component {
   render() {
     return (
       // TODO: create the <div> game template
-      <div className="game">
-        <div className="game-details">
-          <p className="game-year">{this.state.gameYear}</p>
-          <h2 className="title">{this.state.gameTitle}</h2>
+      <div id={this.state.gameTitle} className="game">
+        <div className="game-info-container">
+          <p className="year">{this.state.gameYear}</p>
+          <h2 className="game-title">{this.state.gameTitle}</h2>
         </div>
       </div>
     );
