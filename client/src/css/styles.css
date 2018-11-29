@@ -41,7 +41,6 @@ body {
 }
 
 .game-title {
-  height: 24px;
   font-family: "Source Sans Pro", SourceSansPro, -apple-system, sans-serif;
   font-weight: lighter;
 }
@@ -59,9 +58,8 @@ body {
   margin: 11px 0 18px 0;
 }
 
-
 .game-info-container {
-  margin: 15px 20px;
+  margin: 15px;
 }
 
 .game-list-container {
@@ -97,30 +95,13 @@ body {
   padding-bottom: 0;
 }
 
+.navbar {
+  background: #000000;
+  opacity: 0.8;
+}
+
 .rating {
   font-size: 1.3em;
-}
-
-.sticky-content {
-  width: 300px;
-  margin: 0 auto;
-  padding: 9px 0;
-}
-
-#sticky-header {
-  display: none;
-  position: sticky;
-  top: 0;
-  height: 49px;
-  width: 100%;
-  background-color: #000000;
-  opacity: 0.8;
-  z-index: 100;
-}
-
-.sticky-header {
-  display: flex;
-  align-content: center;
 }
 
 .year {
