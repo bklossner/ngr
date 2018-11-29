@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bklossner/ngr/issues"
   },
-  "homepage": "https://github.com/bklossner/ngr#readme"
+  "homepage": "https://github.com/bklossner/ngr#readme",
+  "dependencies": {
+    "react-scripts": "^1.1.5"
+  }
 }
