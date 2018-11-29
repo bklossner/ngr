@@ -1,5 +1,5 @@
 /**
- * @class NGRLogo
+ * @class NgrLogo
  * @description Displays the "Neo Geo Reviews" logo
  * @author Bob Klossner
  */

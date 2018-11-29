@@ -1,4 +1,5 @@
 import React from 'react';
+import '../images/baseball_stars_2_480x360.jpg';
 
 class Game extends React.Component {
   
@@ -31,7 +32,7 @@ class Game extends React.Component {
       gameDev: this.props.dev,
       gameRating: this.props.rating,
       gameYear: this.props.year,
-      gameReview: 'Boogey boogey boogey'
+      gameReview: 'Placeholder review text'
     });
   }
   

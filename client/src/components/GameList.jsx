@@ -1,5 +1,5 @@
 import React from 'react';
-import Game from './game';
+import Game from './Game';
 
 class GameList extends React.Component {
   
@@ -33,9 +33,6 @@ class GameList extends React.Component {
   }
   
   render() {
-    
-    let cols = 3;
-    let count = 1;
     
     return (
       <div className="container">

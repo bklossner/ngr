@@ -1,6 +1,6 @@
 import React from 'react';
-import SNKLogo from './snklogo';
-import NGRLogo from './ngrlogo';
+import SnkLogo from './SnkLogo';
+import NgrLogo from './NgrLogo';
 
 class Header extends React.Component {
   
@@ -12,7 +12,7 @@ class Header extends React.Component {
   
   /**
    * @function render
-   * @description Output the header element, including {@link SNKLogo} and {@link NGRLogo}
+   * @description Output the header element, including {@link SnkLogo} and {@link NgrLogo}
    * @returns {*}
    */
   render() {
@@ -20,13 +20,13 @@ class Header extends React.Component {
       <div className="container">
         <div className="row justify-content-sm-center">
           <div className="col-sm-auto">
-            <SNKLogo/>
+            <SnkLogo/>
           </div>
         </div>
         <div className="row justify-content-sm-center">
           <div className="col-sm-auto">
             <h1 className="sr-only">{this.srText}</h1>
-            <NGRLogo/>
+            <NgrLogo/>
           </div>
         </div>
       </div>
