@@ -7,12 +7,6 @@ class SortByDropDown extends React.Component {
     this.state = {
       currentSort : "Name"
     };
-    
-    this.sort = this.sort.bind(this);
-  }
-  
-  sort(val) {
-    alert(`Sort by ${val}`);
   }
   
   render() {
