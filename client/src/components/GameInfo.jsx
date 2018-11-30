@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from '@reach/router';
+import { IoIosArrowBack } from 'react-icons/io';
 /**
  * @desc Page that displays all of the unique information of a Game. This is displayed
  * when a user clicks on a game's thumbnail image on the GameList component.
@@ -57,6 +58,7 @@ class GameInfo extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col">
+            <Link to="/"><IoIosArrowBack className="back-arrow" /></Link>
             <h1>{this.state.title}</h1>
             <p>{this.state.release_year}</p>
             <p>{this.state.genre}</p>
