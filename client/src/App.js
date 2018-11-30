@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className="App">
         
         {/* Sticky navbar */}
-        <NavSticky />
+        {/*<NavSticky />*/}
         
         {/* Top Hero (banner) images */}
         <Header />
