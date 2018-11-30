@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Game from './Game';
 
 class GameList extends React.Component {
@@ -24,7 +25,6 @@ class GameList extends React.Component {
         return response.json();
       })
       .then(function(data) {
-        console.log(data);
         self.setState({games: data});
       })
       .catch(err => {
@@ -40,12 +40,14 @@ class GameList extends React.Component {
         <div className="row">
           <div className="col-12">
             <div className="game-list-container">
+              
               {this.state.games.map(game =>
-                <Game key={game.id} dev={game.developer} genre={game.genre} id={game.id} rating={game.rating} title={game.title} year={game.release_year} />
+                <Game key={game.id} {...game} />
               )}
             </div>
           </div>
         </div>
+        
       </div>
     )
   }
