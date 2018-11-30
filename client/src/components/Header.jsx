@@ -19,13 +19,13 @@ class Header extends React.Component {
   render() {
     return(
       <div className="container">
-        <div className="row justify-content-sm-center">
-          <div className="col-sm-auto">
+        <div className="row justify-content-center">
+          <div className="col-xs-auto">
             <SnkLogo/>
           </div>
         </div>
-        <div className="row justify-content-sm-center">
-          <div className="col-sm-auto">
+        <div className="row justify-content-center">
+          <div className="col-xs-auto">
             <h1 className="sr-only">{this.srText}</h1>
             <Link to="/"><NgrLogo /></Link>
           </div>
