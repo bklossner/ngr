@@ -37,14 +37,13 @@ router.get('/', function (req, res) {
    * @type {string} allGamesSQL
    */
   const allGamesSQL = `
-    select game.id, game.title, game.review, genre.genre,
-      developer.developer, rating.rating, release_year.release_year
-    from game, genre, developer, rating, release_year
+    select game.id, game.title, TO_BASE64(game.screenshot) as screenshot, genre.genre,
+      rating.rating, release_year.release_year
+    from game, genre, rating, release_year
     where game.genre_id = genre.id and
-      game.developer_id = developer.id and
       game.year_id = release_year.id and
       game.rating_id = rating.id
-    order by game.genre_id`;
+    order by game.title ASC`;
   
   runSQL(allGamesSQL, req, res);
 });
@@ -59,18 +58,18 @@ router.get('/:gameId', function (req, res) {
    * @description SQL to return all games in the database
    * @type {string} allGamesSQL
    */
-  const allGamesSQL = `
-    select game.id, game.title, genre.genre, developer.developer,
-           rating.rating, release_year.release_year
+  const gameById = `
+    select game.id, game.title, game.review, TO_BASE64(game.screenshot) as screenshot, genre.genre,
+      developer.developer, rating.rating, release_year.release_year
     from game, genre, developer, rating, release_year
     where game.genre_id = genre.id and
-          game.developer_id = developer.id and
-          game.year_id = release_year.id and
-          game.rating_id = rating.id and
+      game.developer_id = developer.id and
+      game.year_id = release_year.id and
+      game.rating_id = rating.id and
           game.id = ${req.params.gameId}
     order by game.genre_id`;
   
-  runSQL(allGamesSQL, req, res);
+  runSQL(gameById, req, res);
 });
 
 /**
