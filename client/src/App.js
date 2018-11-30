@@ -22,11 +22,8 @@ class App extends React.Component {
         
         {/* Specify the different routes (pages) */}
         <Router>
-          {/* Root */}
           <Home path="/" />
-          
-          {/* Unique Game Information page */}
-          <GameInfo path="/gameinfo" />
+          <GameInfo path="gameinfo/:id" />
         </Router>
         
       </div>
