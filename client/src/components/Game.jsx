@@ -1,5 +1,12 @@
 import React from 'react';
-import '../images/baseball_stars_2_480x360.jpg';
+import {Link} from '@reach/router';
+
+/**
+ * @desc The screenshot needs to be decoded and set as base64. Prefix this string to the
+ * "src" attribute of <img>
+ * @type {string}
+ */
+var imgEncoding = "data:image/jpeg;base64, ";
 
 class Game extends React.Component {
   
@@ -8,14 +15,12 @@ class Game extends React.Component {
     
     // Define instance/state variables
     this.state = {
-      gameTitle: '',
       id: 0,
+      gameTitle: '',
       gameGenre: '',
-      gameDev: '',
       gameRating: 0,
       gameYear: 0,
-      gameReview: '',
-      showModal: false
+      screenshot: ''
     };
   }
   
@@ -24,15 +29,13 @@ class Game extends React.Component {
    */
   componentDidMount() {
     // TODO: Load the game's data here
-    
     this.setState({
       id: this.props.id,
       gameTitle: this.props.title,
       gameGenre: this.props.genre,
-      gameDev: this.props.dev,
       gameRating: this.props.rating,
-      gameYear: this.props.year,
-      gameReview: 'Placeholder review text'
+      gameYear: this.props.release_year,
+      gameScreenshot: imgEncoding + this.props.screenshot
     });
   }
   
@@ -42,13 +45,18 @@ class Game extends React.Component {
    */
   render() {
     return (
-      // TODO: create the <div> game template
-      <div id={this.state.gameTitle} className="game">
-        <div className="game-info-container">
-          <p className="year">{this.state.gameYear}</p>
-          <h2 className="game-title">{this.state.gameTitle}</h2>
+      <Link to={"gameinfo/" + this.state.id}>
+        <div id={this.state.id} className="game">
+          <div className="screenshot-container">
+            <img className="screenshot" src={this.state.gameScreenshot} alt={this.state.gameTitle} width="300" height="169" />
+            <div className="gradient-overlay" />
+          </div>
+          <div className="game-info-container">
+            <p className="year">{this.state.gameYear}</p>
+            <h2 className="game-title">{this.state.gameTitle}</h2>
+          </div>
         </div>
-      </div>
+      </Link>
     );
   }
   
