@@ -6,8 +6,9 @@ import React from 'react';
  */
 class GameInfo extends React.Component {
   
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    let gameId = this.props.id;
+    console.log("gameId", gameId);
   }
   
   render() {
@@ -15,8 +16,8 @@ class GameInfo extends React.Component {
     return(
       <div className="container">
         <div className="row">
-          <div className="col-10 offset-1">
-            <h1>Game Info</h1>
+          <div className="col">
+            <h1>{this.props.id}</h1>
           </div>
         </div>
       </div>
