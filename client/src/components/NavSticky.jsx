@@ -16,12 +16,6 @@ class NavSticky extends React.Component {
           <img src={logo} width={imgWidth} height={imgHeight} alt={altText} />
         </div>
       </nav>
-      
-      // <nav className="navbar-sticky navbar navbar-default navbar-fixed-top">
-      //   <div className="navbar-header">
-      //
-      //   </div>
-      // </nav>
     )
   }
 }
