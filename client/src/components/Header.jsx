@@ -1,6 +1,7 @@
 import React from 'react';
 import SnkLogo from './SnkLogo';
 import NgrLogo from './NgrLogo';
+import { Link } from '@reach/router';
 
 class Header extends React.Component {
   
@@ -26,7 +27,7 @@ class Header extends React.Component {
         <div className="row justify-content-sm-center">
           <div className="col-sm-auto">
             <h1 className="sr-only">{this.srText}</h1>
-            <NgrLogo/>
+            <Link to="/"><NgrLogo /></Link>
           </div>
         </div>
       </div>
