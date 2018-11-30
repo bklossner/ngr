@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700');
 
+a, a:hover {
+  color: #ffffff;
+}
+
 body {
   background: black;
   margin: 0;
@@ -16,10 +20,10 @@ body {
   margin: 14px 0 0 0;
 }
 
-
 .game {
+  position: relative;
   align-items: flex-end;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("../images/baseball_stars_2_480x360.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
   border-radius: 1px;
   display: flex;
   flex-direction: row;
@@ -35,14 +39,36 @@ body {
   margin: 15px 19px;
 }
 
+.game-info-container {
+  position: absolute;
+  margin: 15px;
+  bottom: 0px;
+}
+
+.game-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
 .game-year {
   font-size: 1em;
   font-weight: bold;
 }
 
-.game-title {
-  font-family: "Source Sans Pro", SourceSansPro, -apple-system, sans-serif;
-  font-weight: lighter;
+.gradient-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  height: 169px;
+  position: absolute;
+  top: 0;
+  width: 300px;
 }
 
 /* Imported CSS from NGR-Static */
@@ -58,22 +84,7 @@ body {
   margin: 11px 0 18px 0;
 }
 
-.game-info-container {
-  margin: 15px;
-}
 
-.game-list-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.game-title {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 300;
-}
 
 .modal {
   filter: drop-shadow(0 0 0.70rem #29292a);
@@ -102,6 +113,10 @@ body {
 
 .rating {
   font-size: 1.3em;
+}
+
+.screenshot-container {
+
 }
 
 .year {
