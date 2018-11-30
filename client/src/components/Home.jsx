@@ -1,7 +1,5 @@
 import React from 'react';
 
-import NavSticky from './NavSticky';
-import Header from './Header';
 import SortByDropDown from './SortByDropDown';
 import GameList from './GameList';
 
