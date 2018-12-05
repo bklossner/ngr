@@ -24,6 +24,9 @@ function runSQL(sql, req, res) {
     // Send the response to the browser, in JSON format
     res.send(JSON.stringify(results));
   });
+  
+  // Close the connection after sending the data
+  res.locals.connection.end();
 }
 
 /**
