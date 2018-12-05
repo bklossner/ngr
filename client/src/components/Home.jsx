@@ -30,7 +30,7 @@ class Home extends React.Component {
      * The Y-value of the .dropdown-container element
      * @type {number|jQuery}
      */
-    let dropdownLocation = $('.dropdown-container').offset().top;
+    let dropdownLocation = $('.dropdown-home').offset().top;
   
     /**
      * The current value of the Y axis
@@ -46,7 +46,7 @@ class Home extends React.Component {
   render() {
     return(
       <div>
-        <DropDown />
+        <span className="dropdown-home"><DropDown /></span>
         <GameList sorters={sorters} />
       </div>
     )
