@@ -55,28 +55,24 @@ class GameList extends React.Component {
   }
   
   renderData (data) {
-    
-    if (data && data.length) {
-      return (
-        <div className="container">
-    
-          <div className="row">
-            <div className="col-12">
-              <div className="game-list-container">
-                {
-                  data.map(game =>
-                    <Game key={game.id} {...game} />
-                  )
-                }
-              </div>
+  
+    return (
+      <div className="container">
+      
+        <div className="row">
+          <div className="col-12">
+            <div className="game-list-container">
+              {
+                data.map(game =>
+                  <Game key={game.id} {...game} />
+                )
+              }
             </div>
           </div>
-
         </div>
-      );
-    } else {
-      return <div>No games found</div>
-    }
+    
+      </div>
+    );
   }
   
   renderLoading () {
