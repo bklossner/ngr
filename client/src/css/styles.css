@@ -12,13 +12,8 @@ body {
   font-family: "Source Sans Pro", SourceSansPro, -apple-system, sans-serif;
 }
 
-.btn {
-  width: 148px;
-}
-
 .btn-group {
   float: right;
-  width: 148px;
 }
 
 .btn-outline-dark {
@@ -41,6 +36,10 @@ body {
 
 .dropdown-item {
   color: #ffffff;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 14px;
+  width: auto;
 }
 
 .dropdown-item:hover {
@@ -50,11 +49,34 @@ body {
 
 .dropdown-menu {
   background-color: #333333;
+  border-radius: 0;
   color: #ffffff;
   margin: 0;
   opacity: 0.98;
   padding: 0;
   border-color: #979797;
+  min-width: 150px;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+  line-height: 1;
+  min-width: 150px;
+  padding: 10px 14px;
+}
+
+.dropdown-toggle::after {
+  border-top: .5em solid;
+  border-right: .5em solid transparent;
+  border-bottom: 0;
+  border-left: .5em solid transparent;
+  color: #4193f3;
+  margin-left: 14px;
+  position: relative;
+  top: 2px;
 }
 
 .game {
