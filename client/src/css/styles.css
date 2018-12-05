@@ -52,7 +52,7 @@ body {
   border-radius: 0;
   color: #ffffff;
   margin: 0;
-  opacity: 0.98;
+  opacity: 0.9;
   padding: 0;
   border-color: #979797;
   min-width: 150px;
@@ -135,6 +135,11 @@ body {
 
 .logo-ngr {
   margin: 11px 0 18px 0;
+}
+
+.logo-xs-container {
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
