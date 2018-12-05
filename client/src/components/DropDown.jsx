@@ -1,8 +1,7 @@
 import React from 'react';
-import GameList from './GameList';
 
-class SortByDropDown extends React.Component {
-
+class DropDown extends React.Component {
+  
   initialSort = 'title';
   
   constructor(props) {
@@ -66,16 +65,14 @@ class SortByDropDown extends React.Component {
    * @desc Function to run the sort method and display the newly reordered list
    */
   sort = () => {
-    console.log("sort()", this.state.sortBy);
     let sorters = [{ property: this.state.sortBy, direction: 'ASC' }];
-    return <GameList sorters={sorters} />
   };
   
   render() {
     return (
       <div className="container">
         <div className="row">
-          <div className="dropdown-container">
+          <div className="dropdown-container d-none d-sm-block">
             <div className="btn-group">
               <button type="button" className="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sort by {this.state.sortByDisplay}
@@ -93,4 +90,4 @@ class SortByDropDown extends React.Component {
   }
 }
 
-export default SortByDropDown;
+export default DropDown;
