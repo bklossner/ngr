@@ -5,7 +5,8 @@
  */
 
 import React from 'react';
-import ngrLogo from '../images/logo.png';
+import ngrLogo from './../images/logo.png';
+import ngrLogoXS from './../images/logo_255x75.png';
 
 class NGRLogo extends React.Component {
   
@@ -22,7 +23,11 @@ class NGRLogo extends React.Component {
    */
   render() {
     return (
-      <img className="ngrLogo" src={ngrLogo} alt={this.description} title={this.description} />
+      <div className="col-xs-auto">
+        <h1 className="sr-only">{this.srText}</h1>
+        <img className="ngrLogo d-none d-sm-block" src={ngrLogo} alt={this.description} title={this.description} />
+        <img className="ngrLogo-xs d-block d-sm-none" src={ngrLogoXS} alt={this.description} title={this.description} />
+      </div>
     );
   }
 }
