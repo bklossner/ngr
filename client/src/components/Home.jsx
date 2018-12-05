@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SortByDropDown from './SortByDropDown';
+import DropDown from './DropDown';
 import GameList from './GameList';
 import $ from 'jquery';
 
@@ -46,7 +46,7 @@ class Home extends React.Component {
   render() {
     return(
       <div>
-        <SortByDropDown />
+        <DropDown />
         <GameList sorters={sorters} />
       </div>
     )
