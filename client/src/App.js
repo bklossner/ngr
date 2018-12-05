@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/App.css';
-import $ from 'jquery';
 import { Router } from '@reach/router';
 
 import NavSticky from './components/NavSticky';
