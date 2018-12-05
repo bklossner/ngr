@@ -1,55 +1,86 @@
 import React from 'react';
 
 import Game from './Game';
+import {createSorter} from '../util/Sort';
 
 class GameList extends React.Component {
   
   constructor(props) {
     super(props);
-    
     this.state = {
-      games: []
+      games: [],
+      sorters: this.props.sorters
+    };
+  }
+  
+  static defaultProps = {
+    sorters: [
+      { property: 'title' },
+      { property: 'release_year' },
+      { property: 'genre'}
+      ]
+  };
+  
+  componentDidMount () {
+    fetch('/games')
+      .then(res => res.json())
+      .then(this.onLoad);
+  }
+  
+  parseData(data) {
+    const { sorters } = this.state;
+    
+    if(data && data.length) {
+      if(Array.isArray(sorters) && sorters.length) {
+        data.sort(createSorter(...sorters));
+      }
+    }
+    
+    return data;
+  }
+  
+  onLoad = (data) => {
+    this.setState({
+      games: this.parseData(data)
+    });
+  };
+  
+  render () {
+    
+    const data = this.state.games;
+    
+    return data ?
+      this.renderData(data) :
+      this.renderLoading()
+  }
+  
+  renderData (data) {
+    
+    if (data && data.length) {
+      return (
+        <div className="container">
+    
+          <div className="row">
+            <div className="col-12">
+              <div className="game-list-container">
+                {
+                  data.map(game =>
+                    <Game key={game.id} {...game} />
+                  )
+                }
+              </div>
+            </div>
+          </div>
+
+        </div>
+      );
+    } else {
+      return <div>No games found</div>
     }
   }
   
-  componentDidMount() {
-    
-    let self = this;
-    
-    fetch('/games', {
-      method: 'GET'})
-      .then(function(response) {
-        if (response.status >= 400) {
-          throw new Error("Bad response from server");
-        }
-        return response.json();
-      })
-      .then(function(data) {
-        self.setState({games: data});
-      })
-      .catch(err => {
-        console.log('caught it!', err);
-      })
-  }
-  
-  render() {
-    
-    return (
-      <div className="container">
-        
-        <div className="row">
-          <div className="col-12">
-            <div className="game-list-container">
-              
-              {this.state.games.map(game =>
-                <Game key={game.id} {...game} />
-              )}
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    )
+  renderLoading () {
+    return <div>Loading...</div>
   }
 }
 
