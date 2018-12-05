@@ -20,15 +20,10 @@ class Header extends React.Component {
     return(
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xs-auto">
-            <SnkLogo/>
-          </div>
+          <SnkLogo/>
         </div>
         <div className="row justify-content-center">
-          <div className="col-xs-auto">
-            <h1 className="sr-only">{this.srText}</h1>
-            <Link to="/"><NgrLogo /></Link>
-          </div>
+          <Link to="/"><NgrLogo /></Link>
         </div>
       </div>
     )
