@@ -72,15 +72,15 @@ class DropDown extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="dropdown-container d-none d-sm-block">
+          <div className="dropdown-container">
             <div className="btn-group">
-              <button type="button" className="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sort by {this.state.sortByDisplay}
               </button>
               <div className="dropdown-menu">
-                <div className="dropdown-item" id="title" onClick={this.sortByName}>Title</div>
-                <div className="dropdown-item" id="release_year" onClick={this.sortByYear}>Year</div>
-                <div className="dropdown-item" id="genre" onClick={this.sortByGenre}>Genre</div>
+                <div className="dropdown-item text-center" id="title" onClick={this.sortByName}>Title</div>
+                <div className="dropdown-item text-center" id="release_year" onClick={this.sortByYear}>Year</div>
+                <div className="dropdown-item text-center" id="genre" onClick={this.sortByGenre}>Genre</div>
               </div>
             </div>
           </div>
