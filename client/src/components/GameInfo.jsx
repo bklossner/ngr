@@ -55,15 +55,17 @@ class GameInfo extends React.Component {
   render() {
     
     return(
-      <div className="container">
+      <div className="container game-info-container">
         <div className="row">
-          <div className="col">
-            <Link to="/"><IoIosArrowBack className="back-arrow" /></Link>
+          <div className="col-1 offset-1">
+            <Link to="/" alt="Back"><IoIosArrowBack className="back-arrow" /></Link>
+          </div>
+          <div className="col-9">
             <h1>{this.state.title}</h1>
-            <p>{this.state.release_year}</p>
-            <p>{this.state.genre}</p>
-            <p>{this.state.developer}</p>
-            <p>Rating: {this.state.rating}/10</p>
+            <p>Released: {this.state.release_year}</p>
+            <p>Genre: {this.state.genre}</p>
+            <p>Developer: {this.state.developer}</p>
+            <p>Our Rating: {this.state.rating}/10</p>
             <p>{this.state.review}</p>
           </div>
         </div>
