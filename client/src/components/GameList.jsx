@@ -9,17 +9,14 @@ class GameList extends React.Component {
     super(props);
     this.state = {
       games: [],
-      sorters: this.props.sorters
+      sorters: [
+      {
+        property: 'title',
+        direction: 'asc'
+      }
+    ]
     };
   }
-  
-  static defaultProps = {
-    sorters: [
-      { property: 'title' },
-      { property: 'release_year' },
-      { property: 'genre'}
-      ]
-  };
   
   componentDidMount () {
     fetch('/games')
@@ -28,7 +25,7 @@ class GameList extends React.Component {
   }
   
   parseData(data) {
-    const { sorters } = this.state;
+    let sorters  = this.state.sorters;
     
     if(data && data.length) {
       if(Array.isArray(sorters) && sorters.length) {
