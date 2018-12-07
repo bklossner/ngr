@@ -98,6 +98,10 @@ body {
 }
 
 .game-info-container {
+  margin-top: 36px;
+}
+
+.game-year-title {
   position: absolute;
   margin: 15px;
   bottom: 0px;
