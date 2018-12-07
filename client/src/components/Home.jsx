@@ -16,10 +16,12 @@ class Home extends React.Component {
   }
   
   componentDidMount(){
+    // Add event listener for scrolling the viewport (necessary for the sticky navbar logic)
     window.addEventListener('scroll', this.handleScroll);
   }
   
   componentWillUnmount(){
+    // Remove the viewport-scrolling event listener
     window.removeEventListener('scroll', this.handleScroll);
   }
   
