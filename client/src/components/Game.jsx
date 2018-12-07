@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from '@reach/router';
 
 /**
- * @desc The screenshot needs to be decoded and set as base64. Prefix this string to the
+ * @desc String necessary to encode the screenshot from blob to base64. Prefix this string to the
  * "src" attribute of <img>
  * @type {string}
  */
