@@ -31,7 +31,7 @@ class Game extends React.Component {
             <img className="screenshot" src={this.state.gameScreenshot} alt={this.state.gameTitle} width="300" height="169" />
             <div className="gradient-overlay" />
           </div>
-          <div className="game-info-container">
+          <div className="game-year-title">
             <p className="year">{this.state.gameYear}</p>
             <h2 className="game-title">{this.state.gameTitle}</h2>
           </div>
