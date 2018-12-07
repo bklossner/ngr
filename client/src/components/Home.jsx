@@ -4,8 +4,6 @@ import DropDown from './DropDown';
 import GameList from './GameList';
 import $ from 'jquery';
 
-let sorters = [{ property: 'title', direction: 'ASC' }];
-
 /**
  * @desc The landing page
  */
@@ -13,6 +11,7 @@ class Home extends React.Component {
   
   constructor(props) {
     super(props);
+    
     this.handleScroll = this.handleScroll.bind(this);
   }
   
@@ -47,7 +46,7 @@ class Home extends React.Component {
     return(
       <div>
         <span className="dropdown-home"><DropDown /></span>
-        <GameList sorters={sorters} />
+        <GameList />
       </div>
     )
   }
