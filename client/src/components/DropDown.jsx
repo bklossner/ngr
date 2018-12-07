@@ -11,6 +11,10 @@ class DropDown extends React.Component {
       sortBy : this.initialSort,
       sortByDisplay : this.capitalizeFirstLetter(this.initialSort)
     };
+    
+    this.sortByName = this.sortByName.bind(this);
+    this.sortByYear = this.sortByYear.bind(this);
+    this.sortByGenre = this.sortByGenre.bind(this);
   }
   
   /**
@@ -28,7 +32,7 @@ class DropDown extends React.Component {
   /**
    * @desc Function to sort by game name.
    */
-  sortByName = () => {
+  sortByName() {
     this.setState({
       sortBy: 'title',
       sortByDisplay: this.capitalizeFirstLetter('title')
@@ -40,7 +44,7 @@ class DropDown extends React.Component {
   /**
    * @desc Function to sort by game release_year
    */
-  sortByYear = () => {
+  sortByYear() {
     this.setState({
       sortBy: 'release_year',
       sortByDisplay: this.capitalizeFirstLetter('year')
@@ -52,7 +56,7 @@ class DropDown extends React.Component {
   /**
    * @desc Function to sort by game genre
    */
-  sortByGenre = () => {
+  sortByGenre() {
     this.setState({
       sortBy: 'genre',
       sortByDisplay: this.capitalizeFirstLetter('genre')
@@ -64,7 +68,7 @@ class DropDown extends React.Component {
   /**
    * @desc Function to run the sort method and display the newly reordered list
    */
-  sort = () => {
+  sort() {
     let sorters = [{ property: this.state.sortBy, direction: 'ASC' }];
   };
   
