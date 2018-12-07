@@ -7,14 +7,14 @@ class GameList extends React.Component {
   
   constructor(props) {
     super(props);
+    
     this.state = {
       games: [],
       sorters: [
-      {
-        property: 'title',
-        direction: 'asc'
-      }
-    ]
+        {
+          property: 'title',
+          direction: 'asc'
+        }]
     };
   }
   
@@ -23,6 +23,12 @@ class GameList extends React.Component {
       .then(res => res.json())
       .then(this.onLoad);
   }
+  
+  onLoad = (data) => {
+    this.setState({
+      games: this.parseData(data)
+    });
+  };
   
   parseData(data) {
     let sorters  = this.state.sorters;
@@ -36,22 +42,9 @@ class GameList extends React.Component {
     return data;
   }
   
-  onLoad = (data) => {
-    this.setState({
-      games: this.parseData(data)
-    });
-  };
-  
   render () {
     
-    const data = this.state.games;
-    
-    return data ?
-      this.renderData(data) :
-      this.renderLoading()
-  }
-  
-  renderData (data) {
+    let data = this.state.games;
   
     return (
       <div className="container">
@@ -72,9 +65,6 @@ class GameList extends React.Component {
     );
   }
   
-  renderLoading () {
-    return <div>Loading...</div>
-  }
 }
 
 export default GameList;
