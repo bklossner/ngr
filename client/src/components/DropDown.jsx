@@ -4,7 +4,11 @@ class DropDown extends React.Component {
   
   constructor(props) {
     super(props);
-    
+  
+    /**
+     * @desc Default state values
+     * @type {{sortBy: string, displayVal: string}}
+     */
     this.state = {
       sortBy: 'title',
       displayVal: 'Title'
@@ -13,15 +17,28 @@ class DropDown extends React.Component {
     this.sort = this.sort.bind(this);
   }
   
+  /**
+   * @desc Set the state to the new values selected in the dropdown
+   * @param condition
+   * @param display
+   */
   sort(condition, display) {
     this.setState({
       sortBy: condition,
       displayVal: display
-      }, () => {
-        alert(`Sort by ${this.state.sortBy}`);
-        // Call the sort function
       }
     );
+  }
+  
+  /**
+   * @desc When the dropdown selection has changed, notify <GameList> to re-render (somehow)
+   * @param prevProps
+   * @param prevState
+   * @param snapshot
+   */
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("prevState", prevState.sortBy, prevState.displayVal);
+    console.log("currState", this.state.sortBy, this.state.displayVal);
   }
   
   render() {
