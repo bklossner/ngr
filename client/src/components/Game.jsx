@@ -6,43 +6,23 @@ import {Link} from '@reach/router';
  * "src" attribute of <img>
  * @type {string}
  */
-var imgEncoding = "data:image/jpeg;base64, ";
+var imgEncoder = "data:image/jpeg;base64, ";
 
 class Game extends React.Component {
   
   constructor(props) {
     super(props);
     
-    // Define instance/state variables
+    // Get all of the game info being passed in the <Game> properties in <GameList>
     this.state = {
-      id: 0,
-      gameTitle: '',
-      gameGenre: '',
-      gameRating: 0,
-      gameYear: 0,
-      screenshot: ''
-    };
-  }
-  
-  /**
-   * @description Load the game's information from the server
-   */
-  componentDidMount() {
-    // TODO: Load the game's data here
-    this.setState({
       id: this.props.id,
       gameTitle: this.props.title,
       gameGenre: this.props.genre,
-      gameRating: this.props.rating,
       gameYear: this.props.release_year,
-      gameScreenshot: imgEncoding + this.props.screenshot
-    });
+      gameScreenshot: imgEncoder + this.props.screenshot
+    };
   }
   
-  /**
-   * @description The output template of a game
-   * @returns {*}
-   */
   render() {
     return (
       <Link to={"gameinfo/" + this.state.id}>
