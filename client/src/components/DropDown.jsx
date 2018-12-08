@@ -5,10 +5,6 @@ class DropDown extends React.Component {
   constructor(props) {
     super(props);
   
-    /**
-     * @desc Default state values
-     * @type {{sortBy: string, displayVal: string}}
-     */
     this.state = {
       sortBy: 'title',
       displayVal: 'Title'
@@ -37,8 +33,7 @@ class DropDown extends React.Component {
    * @param snapshot
    */
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("prevState", prevState.sortBy, prevState.displayVal);
-    console.log("currState", this.state.sortBy, this.state.displayVal);
+    alert("Dropdown has been changed");
   }
   
   render() {
