@@ -15,12 +15,7 @@ class GameList extends React.Component {
      * @type {{games: Array, sorters: {property: string, direction: string}[]}}
      */
     this.state = {
-      games: [],
-      sorters: [
-        {
-          property: 'title',
-          direction: 'asc'
-        }]
+      games: []
     };
   }
   
@@ -47,6 +42,7 @@ class GameList extends React.Component {
    * @return {*}
    */
   parseData(data) {
+    
     let sorters  = this.state.sorters;
     
     if(data && data.length) {
@@ -54,15 +50,16 @@ class GameList extends React.Component {
         data.sort(createSorter(...sorters));
       }
     }
-    
     return data;
   }
+  
   
   render() {
     
     let data = this.state.games;
-  
+    
     return (
+      
       <div className="container">
         <div className="row">
           <div className="col-12">
