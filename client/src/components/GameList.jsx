@@ -15,7 +15,13 @@ class GameList extends React.Component {
      * @type {{games: Array, sorters: {property: string, direction: string}[]}}
      */
     this.state = {
-      games: []
+      games: [],
+      sortBy: [
+        {
+          property: 'title',
+          direction: 'asc'
+        }
+      ]
     };
   }
   
@@ -43,13 +49,20 @@ class GameList extends React.Component {
    */
   parseData(data) {
     
-    let sorters  = this.state.sorters;
+    let sortBy  = this.state.sortBy;
+    
+    console.log("sorters", sortBy);
+    console.log("data", data);
+    console.log("data length", data.length);
+    console.log("sorters length", sortBy.length);
+    console.log("...sorters", ...sortBy);
     
     if(data && data.length) {
-      if(Array.isArray(sorters) && sorters.length) {
-        data.sort(createSorter(...sorters));
+      if(Array.isArray(sortBy) && sortBy.length) {
+        data.sort(createSorter(...sortBy));
       }
     }
+    
     return data;
   }
   
