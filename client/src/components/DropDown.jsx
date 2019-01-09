@@ -33,7 +33,13 @@ class DropDown extends React.Component {
    * @param snapshot
    */
   componentDidUpdate(prevProps, prevState, snapshot) {
-    alert("Dropdown has been changed");
+    
+    let pState = prevState.sortBy;
+    let nState = this.state.sortBy;
+    
+    if(pState !== nState) {
+      alert(`Update the GameList, sort by ${nState}`);
+    }
   }
   
   render() {
