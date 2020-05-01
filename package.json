@@ -4,7 +4,9 @@
   "description": "NGR",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/bklossner/ngr#readme",
   "dependencies": {
-    "react-scripts": "^1.1.5"
-  }
+    "react-scripts": "^1.1.5",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
