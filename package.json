@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/bklossner/ngr#readme",
   "dependencies": {
-    "react-scripts": "^1.1.5"
+    "react-scripts": "^2.1.4"
   }
 }
